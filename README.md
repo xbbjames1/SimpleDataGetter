@@ -1,0 +1,2 @@
+# SimpleDataGetter
+SimpleVersionForChallenge
