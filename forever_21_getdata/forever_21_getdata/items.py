@@ -11,4 +11,8 @@ import scrapy
 class Forever21GetdataItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    price = scrapy.Field()
+    size = scrapy.Field()
+    color = scrapy.Field()
+    img = scrapy.Field()
+

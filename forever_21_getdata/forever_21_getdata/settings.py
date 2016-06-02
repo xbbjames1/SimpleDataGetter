@@ -29,6 +29,7 @@ NEWSPIDER_MODULE = 'forever_21_getdata.spiders'
 #CONCURRENT_REQUESTS_PER_DOMAIN=16
 #CONCURRENT_REQUESTS_PER_IP=16
 
+
 # Disable cookies (enabled by default)
 #COOKIES_ENABLED=False
 
@@ -61,9 +62,15 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'forever_21_getdata.pipelines.SomePipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'forever_21_getdata.pipelines.Forever21GetdataPipeline': 402,
+}
+MONGO_URI = "127.0.0.1:27017"
+MONGO_DATABASE = "F_DB"
+
+# Disable logging system
+LOG_LEVEL = "INFO"
+
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
